@@ -6,4 +6,4 @@ dataPin, latchPin, clockPin = 23, 24, 25
 #yuh
 
 while True:
-  LED8x8.display()
+  LED8x8.self.display()
