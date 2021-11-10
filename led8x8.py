@@ -3,9 +3,9 @@
 import time
 from shifter import Shifter
 
-class LED8x8:
+class LED8x8():
   
-  'LED 8x8 Class'
+  'Class for controlling an 8x8 LED display'
 
   pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001, 0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
@@ -13,7 +13,9 @@ class LED8x8:
     self.shifter = Shifter(data, latch, clock)
 
   def display(self):
-    while(True):
-      for n in range(len(LED8x8.pattern)):
-        self.shifter.shiftByte(LED8x8.pattern[n])
-        time.sleep(.001)
+    for n in range(len(LED8x8.pattern)):
+      row = n
+      self.shifter.shiftByte(LED8x8.pattern[n])
+      self.shifter.shiftByte(1 << (row-1))
+      time.sleep(.001)
+
