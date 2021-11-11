@@ -3,6 +3,8 @@
 import time
 from shifter import Shifter
 
+import multiprocessing
+
 class LED8x8():
   
   'Class for controlling an 8x8 LED display'
