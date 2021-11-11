@@ -15,8 +15,7 @@ class LED8x8():
   def display(self):
     for n in range(len(LED8x8.pattern)):
       self.shifter.shiftByte(LED8x8.pattern[n])
-      time.sleep(.0005)
       self.shifter.shiftByte(1 << n)
-      time.sleep(.0005)
+      time.sleep(.001)
 
 #yuh
