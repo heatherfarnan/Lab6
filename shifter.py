@@ -26,6 +26,6 @@ class Shifter():
       self.ping(self.clockPin)
 #    self.ping(self.latchPin)
 
-  def latch(self):
-    self.ping(self.latchPin)
+#  def latch(self):
+#    self.ping(self.latchPin)
 
