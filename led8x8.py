@@ -60,18 +60,16 @@ class LED8x8():
     c = random.randint(0,2)
     if c == 0:
       if a[LED8x8.i] > 0b01111111:
-        print(bin(a[LED8x8.i]))
         a[LED8x8.i] = a[LED8x8.i] << 1
         a[LED8x8.i] = a[LED8x8.i] & 0b11111111
-        print(bin(a[LED8x8.i]))
         a[LED8x8.i] += 0b00000001
-        print(bin(a[LED8x8.i]))
     if c == 1:
       pass
     if c == 2:
-      if a[LED8x8.i] < 254:
-        a[LED8x8.i] >> 1
-        #a[LED8x8.i] += 128
+      if a[LED8x8.i] < 0b11111110:
+        a[LED8x8.i] = a[LED8x8.i] >> 1
+        a[LED8x8.i] = a[LED8x8.i] & 0b11111111
+        a[LED8x8.i] += 0b10000000
     print('row goes %d' %r)
     print('column goes %d' %c)
     print(a[:])
