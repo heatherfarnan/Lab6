@@ -50,12 +50,14 @@ class LED8x8():
         LED8x8.i += 1
     c = random.randint(0,2)
     if c == 0:
-      a[LED8x8.i] << 1
-      if a[LED8x8.i] == 0b11111111:
-        a[LED8x8.i] = 0b01111111
+      if a[LED8x8.i] < 256:
+        a[LED8x8.i] << 1
+        a[LED8x8.i] += 1
+
     if c == 1:
       pass
     if c == 2:
-      a[LED8x8.i] >> 1
-      if a[LED8x8.i] == 0b11111111:
-        a[LED8x8.i] = 0b11111110
+      if a[LED8x8.i] < 510:
+        a[LED8x8.i] >> 1
+        a[LED8x8.i] += 256
+        
