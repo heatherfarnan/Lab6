@@ -38,6 +38,8 @@ class LED8x8():
     r = random.randint(0,2)
     if r == 0:
       if LED8x8.i != 0:
+        print(bin(a[LED8x8.i-1]))
+        print(bin(a[LED8x8.i]))
         a[LED8x8.i-1] = a[LED8x8.i]
         print(bin(a[LED8x8.i-1]))
         a[LED8x8.i] = 0b1111111
