@@ -59,9 +59,12 @@ class LED8x8():
         LED8x8.i += 1
     c = random.randint(0,2)
     if c == 0:
-      if a[LED8x8.i] > 127:
+      if a[LED8x8.i] > 0b01111111:
+        print(bin(a[LED8x8.i]))
         a[LED8x8.i] << 1
-        a[LED8x8.i] += 1
+        print(bin(a[LED8x8.i]))
+        a[LED8x8.i] += 0b00000001
+        print(bin(a[LED8x8.i]))
     if c == 1:
       pass
     if c == 2:
