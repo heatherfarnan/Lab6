@@ -39,9 +39,10 @@ class LED8x8():
     if r == 0:
       if LED8x8.i != 0:
         a[LED8x8.i-1] = a[LED8x8.i]
-        print(a[LED8x8.i-1])
+        print(bin(a[LED8x8.i-1]))
         a[LED8x8.i] = 0b1111111
-        print(a[LED8x8.i-1])
+        print(bin(a[LED8x8.i-1]))
+        print(bin(a[LED8x8.i]))
         LED8x8.i -= 1
     if r == 1:
       pass
@@ -63,4 +64,3 @@ class LED8x8():
         a[LED8x8.i] += 256
     time.sleep(.1)
     print(a[:])
-    
