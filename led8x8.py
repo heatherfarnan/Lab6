@@ -7,7 +7,7 @@ import multiprocessing
 
 import random
 
-a = multiprocessing.array('i', 8)
+a = multiprocessing.Array('i', 8)
 
 class LED8x8():
   
