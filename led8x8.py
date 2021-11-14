@@ -13,19 +13,23 @@ class LED8x8():
   
   'Class for controlling an 8x8 LED display'
 
-  pattern = [0b11111111, 0b11111111, 0b11111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111]
+  a = [0b11111111, 0b11111111, 0b11111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111]
   i = 4
 
   #pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001,0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
   def __init__(self, data, latch, clock):
     self.shifter = Shifter(data, latch, clock)
-    a.daemon = True
-    a.start()
+
+    p = multiprocessing.Process(name='name', args=(a))
+
+    p.daemon = True
+    p.start()
+
 
   def display(self):
-    for n in range(len(LED8x8.pattern)):
-      self.shifter.shiftByte(LED8x8.pattern[n])
+    for n in range(len(a)):
+      self.shifter.shiftByte(a[n])
       self.shifter.shiftByte(1 << n)
       self.shifter.latch()
       time.sleep(.001)
