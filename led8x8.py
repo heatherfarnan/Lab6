@@ -47,13 +47,8 @@ class LED8x8():
     r = random.randint(0,2)
     if r == 0:
       if LED8x8.i != 0:
-        print(bin(a[LED8x8.i-1]))
-        print(bin(a[LED8x8.i]))
         a[LED8x8.i-1] = a[LED8x8.i]
-        print(bin(a[LED8x8.i-1]))
         a[LED8x8.i] = 0b11111111
-        print(bin(a[LED8x8.i-1]))
-        print(bin(a[LED8x8.i]))
         LED8x8.i -= 1
     if r == 1:
       pass
@@ -73,5 +68,6 @@ class LED8x8():
       if a[LED8x8.i] < 254:
         a[LED8x8.i] >> 1
         #a[LED8x8.i] += 128
-    time.sleep(.1)
-    print(a[:])
+    print(r)
+    print(c)
+    time.sleep(2)
