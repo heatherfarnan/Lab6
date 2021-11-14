@@ -72,6 +72,6 @@ class LED8x8():
     if c == 2:
       if a[LED8x8.i] < 254:
         a[LED8x8.i] >> 1
-        a[LED8x8.i] += 128
+        #a[LED8x8.i] += 128
     time.sleep(.1)
     print(a[:])
