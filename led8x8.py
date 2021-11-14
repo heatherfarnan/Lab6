@@ -51,7 +51,7 @@ class LED8x8():
         print(bin(a[LED8x8.i]))
         a[LED8x8.i-1] = a[LED8x8.i]
         print(bin(a[LED8x8.i-1]))
-        a[LED8x8.i] = 0b1111111
+        a[LED8x8.i] = 0b11111111
         print(bin(a[LED8x8.i-1]))
         print(bin(a[LED8x8.i]))
         LED8x8.i -= 1
@@ -60,7 +60,7 @@ class LED8x8():
     if r == 2:
       if LED8x8.i != 7:
         a[LED8x8.i+1] = a[LED8x8.i]
-        a[LED8x8.i] = 0b1111111
+        a[LED8x8.i] = 0b11111111
         LED8x8.i += 1
     c = random.randint(0,2)
     if c == 0:
