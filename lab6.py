@@ -6,3 +6,4 @@ led = LED8x8(dataPin, latchPin, clockPin)
 
 while True:
   led.display()
+  led.randomwalk()
