@@ -73,4 +73,4 @@ class LED8x8():
     print('row goes %d' %r)
     print('column goes %d' %c)
     print(a[:])
-    time.sleep(2)
+    time.sleep(.1)
