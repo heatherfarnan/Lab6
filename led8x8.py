@@ -37,16 +37,16 @@ class LED8x8():
   def randomwalk(self):
     r = random.randint(0,2)
     if r == 0:
-      a[LED8x8.i-1] = a[LED8x8.i]
-      a[LED8x8.i] = 0b1111111
       if LED8x8.i != 0:
+        a[LED8x8.i-1] = a[LED8x8.i]
+        a[LED8x8.i] = 0b1111111
         LED8x8.i -= 1
     if r == 1:
       pass
     if r == 2:
-      a[LED8x8.i+1] = a[LED8x8.i]
-      a[LED8x8.i] = 0b1111111
       if LED8x8.i !=7:
+        a[LED8x8.i+1] = a[LED8x8.i]
+        a[LED8x8.i] = 0b1111111
         LED8x8.i += 1
     c = random.randint(0,2)
     if c == 0:
