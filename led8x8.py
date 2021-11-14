@@ -68,6 +68,7 @@ class LED8x8():
       if a[LED8x8.i] < 254:
         a[LED8x8.i] >> 1
         #a[LED8x8.i] += 128
-    print(r)
-    print(c)
+    print('row goes %d' %r)
+    print('column goes %d' %c)
+    print(bin(a[:]))
     time.sleep(2)
